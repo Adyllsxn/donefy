@@ -1,0 +1,6 @@
+@Donefy_HostAddress = http://localhost:5170
+
+GET {{Donefy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

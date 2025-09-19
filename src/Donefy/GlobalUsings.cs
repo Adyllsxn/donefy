@@ -22,4 +22,8 @@ global using Donefy.Src.Core.Domain.Entities;
 global using Donefy.Src.Core.Domain.ValueObjects;
 global using Donefy.Src.Core.Domain.Interfaces;
 global using Donefy.Src.Core.Infrastructure.Data.Context;
+global using Donefy.Src.Core.Infrastructure.Data.Repositories;
+global using Donefy.Src.Core.Infrastructure.Data.Connection;
+global using Donefy.Src.Core.Infrastructure.Data.UoW;
+global using Donefy.Src.Core.Infrastructure.Modules;
 #endregion

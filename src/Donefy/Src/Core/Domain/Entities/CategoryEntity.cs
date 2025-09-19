@@ -2,7 +2,7 @@ namespace Donefy.Src.Core.Domain.Entities;
 public class CategoryEntity: EntityBase, IAggragateRoot
 {
     #region Properties
-    public string Name { get; set; } = string.Empty;
+    public string Name { get; private set; } = string.Empty;
     public bool IsDeleted { get; private set; } = false;
     public DateTime? DeletedAt { get; private set; }
     public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
@@ -38,9 +38,8 @@ public class CategoryEntity: EntityBase, IAggragateRoot
     }
     public void Update(string name)
     {
-        if (string.IsNullOrWhiteSpace(name) || name == Name)
-            return;
-        
+        if (string.IsNullOrWhiteSpace(name) || name == Name) return;
+    
         Validate(name);
         Name = name;
         UpdatedAt = DateTime.UtcNow;

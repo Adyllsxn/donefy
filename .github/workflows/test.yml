@@ -18,7 +18,7 @@ jobs:
                 dotnet-version: '8.0.x'
 
           - name: Restore dependencies
-            run: dotnet restore src/Donefy/Donefy.csproj
+            run: dotnet restore test/Donefy/Donefy.csproj
 
           - name: Build do projeto
-            run: dotnet build src/Donefy/Donefy.csproj --no-restore
+            run: dotnet build test/Donefy/Donefy.csproj --no-restore

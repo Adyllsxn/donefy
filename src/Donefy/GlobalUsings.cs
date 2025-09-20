@@ -9,6 +9,7 @@ global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 #endregion
 
 #region External Packages
+global using FluentValidation;
 #endregion
 
 #region Donefy
@@ -28,4 +29,6 @@ global using Donefy.Src.Core.Infrastructure.Data.UoW;
 global using Donefy.Src.Core.Infrastructure.Modules;
 global using Donefy.Src.Core.Application.Interfaces.Facades;
 global using Donefy.Src.Core.Application.Facades;
+global using Donefy.Src.Core.Application.Interfaces.CQRS;
+global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Create;
 #endregion

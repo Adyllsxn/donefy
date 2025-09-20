@@ -8,9 +8,16 @@ public static class ApplicationModule
         #endregion
 
         #region Validations
+        services.AddValidatorsFromAssembly(typeof(CreateCategoryCommandValidator).Assembly);
         #endregion
 
-        #region UseCases
+        #region CQRS
+        var assembly = typeof(ApplicationModule).Assembly;
+        services.Scan(scan => scan
+            .FromAssemblies(assembly)
+            .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<,>)))
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
         #endregion
 
         return services;

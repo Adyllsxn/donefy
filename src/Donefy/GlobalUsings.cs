@@ -33,4 +33,6 @@ global using Donefy.Src.Core.Application.Interfaces.CQRS;
 global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Create;
 global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Delete;
 global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Update;
+global using Donefy.Src.Core.Application.UseCases.Categories.Queries.GetAll;
+global using Donefy.Src.Core.Application.UseCases.Categories.Queries.GetById;
 #endregion

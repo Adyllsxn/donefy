@@ -26,4 +26,6 @@ global using Donefy.Src.Core.Infrastructure.Data.Repositories;
 global using Donefy.Src.Core.Infrastructure.Data.Connection;
 global using Donefy.Src.Core.Infrastructure.Data.UoW;
 global using Donefy.Src.Core.Infrastructure.Modules;
+global using Donefy.Src.Core.Application.Interfaces.Facades;
+global using Donefy.Src.Core.Application.Facades;
 #endregion

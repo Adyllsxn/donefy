@@ -1,7 +1,7 @@
 namespace Donefy.Src.Core.Application.UseCases.Categories.Queries.GetById;
 public class GetCategoryByIdQueryHandler : IQueryHandler<GetCategoryByIdQuery, QueryResult<GetCategoryByIdResponse>>
 {
-    #region Dependencies
+    #region Dependencies and Constructor
     private readonly ICategoryRepository _repository;
     private readonly IValidator<GetCategoryByIdQuery> _validator;
 

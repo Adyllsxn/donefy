@@ -3,6 +3,7 @@ global using System.Text.Json.Serialization;
 #endregion
 
 #region Microsoft
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Design;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -13,6 +14,8 @@ global using FluentValidation;
 #endregion
 
 #region Donefy
+global using Donefy.Src.Shared.Constants;
+global using Donefy.Src.Presentation.DTOs.Categories;
 global using Donefy.Src.Core.Domain.Shared.Results.Messages;
 global using Donefy.Src.Core.Domain.Shared.Results.Status;
 global using Donefy.Src.Core.Domain.Shared.Results.Operations;

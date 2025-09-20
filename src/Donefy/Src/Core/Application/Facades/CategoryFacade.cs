@@ -1,8 +1,7 @@
-
 namespace Donefy.Src.Core.Application.Facades;
 public class CategoryFacade : ICategoryFacade
 {
-    #region Dependencies
+    #region Dependencies and Constructor
     private readonly CreateCategoryCommandHandler _create;
     private readonly DeleteCategoryCommandHandler _delete;
     private readonly UpdateCategoryCommandHandler _update;

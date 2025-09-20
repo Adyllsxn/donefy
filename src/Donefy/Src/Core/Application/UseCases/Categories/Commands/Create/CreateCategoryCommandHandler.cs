@@ -24,9 +24,9 @@ public class CreateCategoryCommandHandler : ICommandHandler<CreateCategoryComman
         if (!result.IsValid)
         {
             return CommandResult<bool>.Failure(
-                false, 
-                $"{MessageResult.Common.FluentValidation}: {string.Join("; ", result.Errors.Select(e => e.ErrorMessage))}", 
-                StatusCode.BadRequest
+                value: false, 
+                message: $"{MessageResult.Common.FluentValidation}: {string.Join("; ", result.Errors.Select(e => e.ErrorMessage))}", 
+                code: StatusCode.BadRequest
             );
         }
         

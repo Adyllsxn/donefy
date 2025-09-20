@@ -1,15 +1,15 @@
-namespace Donefy.Src.Core.Application.UseCases.Categories.Commands.Update;
-public class UpdateCategoryCommandHandler : ICommandHandler<UpdateCategoryCommand, CommandResult<bool>>
+namespace Donefy.Src.Core.Application.UseCases.Categories.Commands.Delete;
+public class DeleteCategoryCommandHandler: ICommandHandler<DeleteCategoryCommand, CommandResult<bool>>
 {
     #region Dependencies
     private readonly ICategoryRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IValidator<UpdateCategoryCommand> _validator;
+    private readonly IValidator<DeleteCategoryCommand> _validator;
 
-    public UpdateCategoryCommandHandler(
+    public DeleteCategoryCommandHandler(
         ICategoryRepository repository,
         IUnitOfWork unitOfWork, 
-        IValidator<UpdateCategoryCommand> validator)
+        IValidator<DeleteCategoryCommand> validator)
     {
         _repository = repository;
         _unitOfWork = unitOfWork;
@@ -18,7 +18,7 @@ public class UpdateCategoryCommandHandler : ICommandHandler<UpdateCategoryComman
     #endregion
 
     #region Command Handler
-    public async Task<CommandResult<bool>> Handle(UpdateCategoryCommand command, CancellationToken token)
+    public async Task<CommandResult<bool>> Handle(DeleteCategoryCommand command, CancellationToken token)
     {
         var validationResult = await _validator.ValidateAsync(command, token);
         if (!validationResult.IsValid)
@@ -41,23 +41,21 @@ public class UpdateCategoryCommandHandler : ICommandHandler<UpdateCategoryComman
                     code: StatusCode.NotFound
                 );
             }
-
-            command.ApplyUpdateTo(existingCategory);
-
-            await _repository.UpdateAsync(existingCategory, token);
+            
+            await _repository.DeleteAsync(command.Id, token);
             await _unitOfWork.CommitAsync(token);
 
             return CommandResult<bool>.Success(
                 value: true,
                 message: MessageResult.Common.Success,
-                code: StatusCode.OK
+                StatusCode.OK
             );
         }
         catch (Exception ex)
         {
             return CommandResult<bool>.Failure(
                 value: false,
-                message: $"{MessageResult.Operation.ErrorUpdate}. Erro {ex.Message}.",
+                message: $"{MessageResult.Operation.ErrorDelete}. Erro {ex.Message}.",
                 code: StatusCode.InternalServerError
             );
         }

@@ -8,7 +8,7 @@ public static class ApplicationModule
         #endregion
 
         #region Validations
-        services.AddValidatorsFromAssembly(typeof(CreateCategoryCommandValidator).Assembly);
+        services.AddValidatorsFromAssembly(typeof(ApplicationModule).Assembly);
         #endregion
 
         #region CQRS

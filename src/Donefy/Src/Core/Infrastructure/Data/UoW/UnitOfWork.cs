@@ -5,9 +5,4 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     {
         await context.SaveChangesAsync(token);
     }
-
-    public async Task RollbackAsync(CancellationToken token)
-    {
-        await context.Database.RollbackTransactionAsync(token);
-    }
 }

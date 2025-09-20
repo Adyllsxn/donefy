@@ -4,48 +4,47 @@ public class MessageResult
     public static class Common
     {
         public const string Null = null;
-        public const string ParamsRequired = "Parâmetros não podem estar vazios.";
-        public const string Unauthorized = "Não autorizado para acessar os dados.";
-        public const string InvalidId = "ID deve ser maior que zero.";
-        public const string InvalidParameters = "Parâmetros inválidos.";
-        public const string InvalidValidatCandidatura = "CandidaturaId e AdminId devem ser válidos.";
-        public const string InternalServerError = "Erro interno no servidor.";
-        public const string Success = "Operação executada com sucesso.";
-        public const string NotFound = "ID não encontrado.";
-        public const string NotFoundInSearch = "Nenhum dado encontrado.";
-        public const string FluentValidation = "Erro de validação";
-        public const string InvalidPassword = "Senha atual incorreta.";
-        public const string InvalidConfirmNewPassword = "A nova senha e a confirmação não coincidem.";
-        public const string InvalidConfirmPassword = "A senha e a confirmação não coincidem.";
-        public const string InvalidCredentials = "Credenciais inválidas.";
-        public const string InvalidEmail = "O domínio de e-mail informado não é válido ou não aceita mensagens.";
-        public const string IsValidNIP = "NIP inválido. Deve conter apenas números e ter entre 5 e 7 dígitos.";
-        public const string ExistsByEmail = "Já existe um usuário com esse Email.";
-        public const string ExistsByNIP = "Já existe um usuário com esse NIP.";
-        public const string InvalidTelefone = "Número de telefone inválido. Deve conter 9 dígitos e começar com 9.";
+        public const string ParamsRequired = "Incomplete data.";
+        public const string Unauthorized = "Unauthorized access.";
+        public const string InvalidId = "Invalid identifier.";
+        public const string InvalidParameters = "Invalid data.";
+        public const string InvalidValidatCandidatura = "Invalid validation data.";
+        public const string InternalServerError = "Internal error.";
+        public const string Success = "Operation completed.";
+        public const string NotFound = "Record not found.";
+        public const string NotFoundInSearch = "No results found.";
+        public const string FluentValidation = "Invalid data.";
+        public const string InvalidPassword = "Incorrect password.";
+        public const string InvalidConfirmNewPassword = "Confirmation does not match.";
+        public const string InvalidConfirmPassword = "Passwords do not match.";
+        public const string InvalidCredentials = "Invalid credentials.";
+        public const string InvalidEmail = "Invalid email.";
+        public const string ExistsByEmail = "Email already exists.";
+        public const string InvalidTelefone = "Invalid phone number.";
     }
+    
     public static class PermissionMessages
     {
-        public const string ForbiddenGetAll = "Você não tem permissão para consultar todos os {0}.";
-        public const string ForbiddenGetById = "Você não tem permissão para consultar este {0}.";
-        public const string ForbiddenCreate = "Você não tem permissão para criar este {0}.";
-        public const string ForbiddenUpdate = "Você não tem permissão para atualizar este {0}.";
-        public const string ForbiddenDelete = "Você não tem permissão para deletar este {0}.";
-        public const string ForbiddenChangePassword = "Você não tem permissão para alterar a senha deste {0}.";
-        public const string ForbiddenRecoverPassword = "Você não tem permissão para recuperar a senha deste {0}.";
-        public const string ForbiddenValidate = "Você não tem permissão para validar este {0}.";
+        public const string ForbiddenGetAll = "No permission to list {0}.";
+        public const string ForbiddenGetById = "No permission to view {0}.";
+        public const string ForbiddenCreate = "No permission to create {0}.";
+        public const string ForbiddenUpdate = "No permission to edit {0}.";
+        public const string ForbiddenDelete = "No permission to delete {0}.";
+        public const string ForbiddenChangePassword = "No permission to change password.";
+        public const string ForbiddenRecoverPassword = "No permission to recover password.";
+        public const string ForbiddenValidate = "No permission to validate {0}.";
     }
 
     public static class Operation
     {
-        public const string ErrorAuth = "Erro ao autenticar.";
-        public const string ErrorCreate = "Erro ao executar a operação (CRIAR).";
-        public const string ErrorUpdate = "Erro ao executar a operação (UPDATE).";
-        public const string ErrorDelete = "Erro ao executar a operação (DELETAR).";
-        public const string ErrorSearch = "Erro ao executar a operação (SEARCH).";
-        public const string ErrorGetAll = "Erro ao executar a operação (GET ALL).";
-        public const string ErrorGetById = "Erro ao executar a operação (GET BY ID).";
-        public const string ErroUpdateStatus = "Erro ao manipular a operação (EDITAR STATUS)";
-        
+        public const string ErrorAuth = "Authentication error.";
+        public const string ErrorCreate = "Error creating.";
+        public const string ErrorUpdate = "Error updating.";
+        public const string ErrorDelete = "Error deleting.";
+        public const string ErrorSearch = "Search error.";
+        public const string ErrorGetAll = "Error listing.";
+        public const string ErrorGetById = "Error retrieving.";
+        public const string ErrorUpdateStatus = "Error updating status.";
     }
+
 }

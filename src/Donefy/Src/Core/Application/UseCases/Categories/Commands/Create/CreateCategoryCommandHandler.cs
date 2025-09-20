@@ -1,7 +1,7 @@
 namespace Donefy.Src.Core.Application.UseCases.Categories.Commands.Create;
 public class CreateCategoryCommandHandler : ICommandHandler<CreateCategoryCommand, CommandResult<bool>>
 {
-    #region Dependencies
+    #region Dependencies and Constructor
     private readonly ICategoryRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IValidator<CreateCategoryCommand> _validator;

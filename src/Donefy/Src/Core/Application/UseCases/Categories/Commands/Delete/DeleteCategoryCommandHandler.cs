@@ -1,7 +1,7 @@
 namespace Donefy.Src.Core.Application.UseCases.Categories.Commands.Delete;
 public class DeleteCategoryCommandHandler: ICommandHandler<DeleteCategoryCommand, CommandResult<bool>>
 {
-    #region Dependencies
+    #region Dependencies and Constructor
     private readonly ICategoryRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IValidator<DeleteCategoryCommand> _validator;

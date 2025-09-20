@@ -1,7 +1,7 @@
 namespace Donefy.Src.Core.Application.UseCases.Categories.Queries.GetAll;
 public class GetAllCategoriesQueryHandler : IQueryHandler<GetAllCategoriesQuery, PagedList<List<GetAllCategoriesResponse>>>
 {
-    #region Dependencies
+    #region Dependencies and Constructor
     private readonly ICategoryRepository _repository;
 
     public GetAllCategoriesQueryHandler(ICategoryRepository repository)

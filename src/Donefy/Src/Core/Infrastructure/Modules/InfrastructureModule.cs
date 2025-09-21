@@ -5,6 +5,7 @@ public static class InfrastructureModule
     {
         #region Repositories
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<ITaskRepository, TaskRepository>();
         #endregion
 
         #region Services

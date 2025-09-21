@@ -7,6 +7,7 @@ public class CategoryFacade : ICategoryFacade
     private readonly UpdateCategoryCommandHandler _update;
     private readonly GetAllCategoriesQueryHandler _getAll;
     private readonly GetCategoryByIdQueryHandler _getById;
+    
     public CategoryFacade(
         CreateCategoryCommandHandler create,
         DeleteCategoryCommandHandler delete,
@@ -23,29 +24,14 @@ public class CategoryFacade : ICategoryFacade
     #endregion
 
     #region ICategoryFacade Implementation
-    public async Task<CommandResult<bool>> Create(CreateCategoryCommand command, CancellationToken token)
-    {
-        return await _create.Handle(command, token);
-    }
+    public async Task<CommandResult<bool>> Create(CreateCategoryCommand command, CancellationToken token) => await _create.Handle(command, token);
 
-    public async Task<CommandResult<bool>> Delete(DeleteCategoryCommand command, CancellationToken token)
-    {
-        return await _delete.Handle(command, token);
-    }
+    public async Task<CommandResult<bool>> Delete(DeleteCategoryCommand command, CancellationToken token) => await _delete.Handle(command, token);
 
-    public async Task<PagedList<List<GetAllCategoriesResponse>>> GetAll(GetAllCategoriesQuery query, CancellationToken token)
-    {
-        return await _getAll.Handle(query, token);
-    }
+    public async Task<CommandResult<bool>> Update(UpdateCategoryCommand command, CancellationToken token) => await _update.Handle(command, token);
 
-    public async Task<QueryResult<GetCategoryByIdResponse>> GetById(GetCategoryByIdQuery query, CancellationToken token)
-    {
-        return await _getById.Handle(query, token);
-    }
+    public async Task<PagedList<List<GetAllCategoriesResponse>>> GetAll(GetAllCategoriesQuery query, CancellationToken token) => await _getAll.Handle(query, token);
 
-    public async Task<CommandResult<bool>> Update(UpdateCategoryCommand command, CancellationToken token)
-    {
-        return await _update.Handle(command, token);
-    }
+    public async Task<QueryResult<GetCategoryByIdResponse>> GetById(GetCategoryByIdQuery query, CancellationToken token) => await _getById.Handle(query, token);
     #endregion
 }

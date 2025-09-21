@@ -23,6 +23,7 @@ global using Donefy.Src.Core.Domain.Shared.Paginations;
 global using Donefy.Src.Core.Domain.Shared.Exceptions;
 global using Donefy.Src.Core.Domain.Entities.Base;
 global using Donefy.Src.Core.Domain.Entities;
+global using Donefy.Src.Core.Domain.Enums;
 global using Donefy.Src.Core.Domain.ValueObjects;
 global using Donefy.Src.Core.Domain.Interfaces;
 global using Donefy.Src.Core.Infrastructure.Data.Context;

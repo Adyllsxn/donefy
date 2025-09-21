@@ -1,9 +1,15 @@
 namespace Donefy.Src.Core.Domain.Interfaces;
-public interface ICategoryRepository
+public interface ICategoryRepository : ICategoryReadRepository, ICategoryWriteRepository { }
+
+public interface ICategoryReadRepository
 {
-    Task<(List<CategoryEntity> Result, int Total)> GetAllAsync(PagedRequest request, CancellationToken token);
-    Task<CategoryEntity?> GetByIdAsync(Guid entityId, CancellationToken token);
-    Task CreateAsync(CategoryEntity entity, CancellationToken token);
-    Task DeleteAsync(Guid entityId, CancellationToken token);
-    Task UpdateAsync(CategoryEntity entity, CancellationToken token);
+    Task<(List<CategoryEntity> Categories, int TotalCount)> GetAllAsync(PagedRequest request, CancellationToken token);
+    Task<CategoryEntity?> GetByIdAsync(Guid categoryId, CancellationToken token);
+}
+
+public interface ICategoryWriteRepository  
+{
+    Task CreateAsync(CategoryEntity category, CancellationToken token);
+    Task UpdateAsync(CategoryEntity category, CancellationToken token);
+    Task DeleteAsync(Guid categoryId, CancellationToken token);
 }

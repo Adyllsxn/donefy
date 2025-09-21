@@ -9,8 +9,8 @@ public interface ITaskReadRepository
 
 public interface ITaskWriteRepository  
 {
-    Task<bool> CreateAsync(TaskEntity task, CancellationToken token);
-    Task<bool> UpdateAsync(TaskEntity task, CancellationToken token);
-    Task<bool> DeleteAsync(Guid taskId, CancellationToken token);
-    Task<bool> UpdateStatusAsync(Guid taskId, EStatus newStatus, CancellationToken token);
+    Task CreateAsync(TaskEntity task, CancellationToken token);
+    Task UpdateAsync(TaskEntity task, CancellationToken token);
+    Task DeleteAsync(Guid taskId, CancellationToken token);
+    Task UpdateStatusAsync(Guid taskId, EStatus newStatus, CancellationToken token);
 }

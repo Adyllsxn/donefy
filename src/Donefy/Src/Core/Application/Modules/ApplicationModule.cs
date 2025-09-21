@@ -5,6 +5,7 @@ public static class ApplicationModule
     {
         #region Facades
         services.AddScoped<ICategoryFacade, CategoryFacade>();
+        services.AddScoped<ITaskFacade, TaskFacade>();
         #endregion
 
         #region Validations

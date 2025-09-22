@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status;
+public class StatusTaskCommand: ICommand<CommandResult<bool>>
 {
-    public class StatusTaskCommand
-    {
-        
-    }
+    public Guid Id { get; set; }
+    public EStatus Status { get; set; }
 }

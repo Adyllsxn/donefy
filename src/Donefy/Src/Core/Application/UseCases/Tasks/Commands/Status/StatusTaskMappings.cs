@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status;
+public static class StatusTaskMappings
 {
-    public class StatusTaskMappings
+    public static void ApplyUpdateStatusTo(this StatusTaskCommand command, TaskEntity entity)
     {
-        
+        entity.UpdateStatus(
+            command.Status
+        );
     }
 }

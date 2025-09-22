@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Delete
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Delete;
+public class DeleteTaskCommandValidator: AbstractValidator<DeleteTaskCommand>
 {
-    public class DeleteTaskCommandValidator
+    public DeleteTaskCommandValidator()
     {
-        
+        RuleFor(x => x.Id)
+            .NotEmpty().WithMessage("ID is required")
+            .NotEqual(Guid.Empty).WithMessage("Invalid ID");
     }
 }

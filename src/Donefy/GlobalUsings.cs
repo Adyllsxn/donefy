@@ -39,4 +39,10 @@ global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Delete;
 global using Donefy.Src.Core.Application.UseCases.Categories.Commands.Update;
 global using Donefy.Src.Core.Application.UseCases.Categories.Queries.GetAll;
 global using Donefy.Src.Core.Application.UseCases.Categories.Queries.GetById;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Commands.Create;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Commands.Delete;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Commands.Update;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetAll;
+global using Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById;
 #endregion

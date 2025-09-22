@@ -67,33 +67,57 @@ DONEFY/
 
 ## How to Run the Project
 
-### Clone this repository:
-
 ```bash
+# Clone this repository:
 git clone https://github.com/Adyllsxn/donefy.git
-```
 
-### Navigate to the project folder:
+
+# Navigate to the project folder:
 
 ```bash
 cd donefy/src
 ```
 
-### Configure the PostgreSQL database in the appsettings.json file.
-
-### Apply EF Core migrations:
+### Configure the PostgreSQL database in the appsettings.json file
 
 ```bash
+# Apply EF Core migrations:
 dotnet ef database update
 ```
 
-### Run the project:
+## 🚀 Run the Project
+
+By default, the project runs on **HTTP**.  
+Use one of the following commands to start it:
 
 ```bash
+# Run normally (default: HTTP)
 dotnet run
+
+# Run with hot reload (HTTP profile)
+dotnet watch run --launch-profile "http"
+
+# Run with hot reload (HTTPS profile)
+dotnet watch run --launch-profile "https"
+```
+
+## 🔧 Troubleshooting
+
+### ⚠️ HTTPS Certificate Issues
+
+If you encounter issues related to HTTPS certificates, you can regenerate the development certificate:
+
+```bash
+# Clean existing certificates
+dotnet dev-certs https --clean
+
+# Create and trust a new certificate
+dotnet dev-certs https --trust
 ```
 
 ## 📘 Documentation
+
+Check out the detailed documentation in the following files:
 
 - [🗺️ API](doc/API.md)
 - [🗺️ ARCHITECTURE](doc/ARCHITECTURE.md)

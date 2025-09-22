@@ -10,6 +10,16 @@ public class EndpointDescriptionsConstants
         public const string Delete = "Delete a category by ID";
     }
 
+    public static class Task
+    {
+        public const string GetById = "Get a task by its unique identifier";
+        public const string GetAll = "Get all tasks with pagination support";
+        public const string Create = "Create a new task";
+        public const string Update = "Update an existing task";
+        public const string UpdateStatus = "Update task status by ID";
+        public const string Delete = "Delete a task by ID";
+    }
+
     public static class User
     {
         public const string Login = "Authenticate user and return JWT token";
@@ -23,10 +33,11 @@ public class EndpointDescriptionsConstants
         public const string GetByName = "Search users by name";
         public const string CheckAuth = "Validate JWT token and check authentication status";
     }
+
     public static class Dashboards
     {
-        public const string GetAdminDashboardData =
-            "Retorna dados agregados e métricas gerais do sistema para o painel administrativo. " +
-            "Inclui totais de imóveis, candidaturas e outras estatísticas relevantes.";
+        public const string GetAdminDashboardData = 
+            "Returns aggregated data and system metrics for the admin dashboard. " +
+            "Includes property totals, applications, and other relevant statistics.";
     }
 }

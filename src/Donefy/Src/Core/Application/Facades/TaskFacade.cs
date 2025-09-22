@@ -27,16 +27,16 @@ public class TaskFacade : ITaskFacade
     #endregion
 
     #region ITaskFacade Implementation
-    public async Task<CommandResult<bool>> Handle(CreateTaskCommand command, CancellationToken token) => await _create.Handle(command, token);
+    public async Task<CommandResult<bool>> Create(CreateTaskCommand command, CancellationToken token) => await _create.Handle(command, token);
 
-    public async Task<CommandResult<bool>> Handle(DeleteTaskCommand command, CancellationToken token) => await _delete.Handle(command, token);
+    public async Task<CommandResult<bool>> Delete(DeleteTaskCommand command, CancellationToken token) => await _delete.Handle(command, token);
 
-    public async Task<CommandResult<bool>> Handle(UpdateTaskCommand command, CancellationToken token) => await _update.Handle(command, token);
+    public async Task<CommandResult<bool>> Update(UpdateTaskCommand command, CancellationToken token) => await _update.Handle(command, token);
 
-    public async Task<CommandResult<bool>> Handle(StatusTaskCommand command, CancellationToken token) => await _status.Handle(command, token);
+    public async Task<CommandResult<bool>> Status(StatusTaskCommand command, CancellationToken token) => await _status.Handle(command, token);
 
-    public async Task<PagedList<List<GetAllTasksResponse>>> Handle(GetAllTasksQuery query, CancellationToken token) => await _getAll.Handle(query, token);
+    public async Task<PagedList<List<GetAllTasksResponse>>> GetAll(GetAllTasksQuery query, CancellationToken token) => await _getAll.Handle(query, token);
 
-    public async Task<QueryResult<GetTaskByIdResponse>> Handle(GetTaskByIdQuery query, CancellationToken token) => await _getById.Handle(query, token);
+    public async Task<QueryResult<GetTaskByIdResponse>> GetById(GetTaskByIdQuery query, CancellationToken token) => await _getById.Handle(query, token);
     #endregion
 }

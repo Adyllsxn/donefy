@@ -16,6 +16,7 @@ global using FluentValidation;
 #region Donefy
 global using Donefy.Src.Shared.Constants;
 global using Donefy.Src.Presentation.DTOs.Categories;
+global using Donefy.Src.Presentation.DTOs.Tasks;
 global using Donefy.Src.Core.Domain.Shared.Results.Messages;
 global using Donefy.Src.Core.Domain.Shared.Results.Status;
 global using Donefy.Src.Core.Domain.Shared.Results.Operations;

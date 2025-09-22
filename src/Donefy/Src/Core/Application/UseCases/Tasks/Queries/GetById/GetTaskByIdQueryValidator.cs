@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById;
+public class GetTaskByIdQueryValidator: AbstractValidator<GetTaskByIdQuery>
 {
-    public class GetTaskByIdQueryValidator
+    public GetTaskByIdQueryValidator()
     {
-        
+        RuleFor(x => x.Id)
+            .NotEmpty().WithMessage("ID is required")
+            .NotEqual(Guid.Empty).WithMessage("Invalid ID");
     }
 }

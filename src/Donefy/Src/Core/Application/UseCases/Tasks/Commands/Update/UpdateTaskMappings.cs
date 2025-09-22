@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Update
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Update;
+public static class UpdateTaskMappings
 {
-    public class UpdateTaskMappings
+    public static void ApplyUpdateTo(this UpdateTaskCommand command, TaskEntity entity)
     {
-        
+        entity.Update(
+            command.Title
+        );
     }
 }

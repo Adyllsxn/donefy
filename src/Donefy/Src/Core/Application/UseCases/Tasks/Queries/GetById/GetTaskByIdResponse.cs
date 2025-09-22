@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById;
+public class GetTaskByIdResponse
 {
-    public class GetTaskByIdResponse
-    {
-        
-    }
+    public Guid Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public EStatus Status { get; set; }
 }

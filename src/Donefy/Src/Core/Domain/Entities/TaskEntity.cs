@@ -1,5 +1,5 @@
 namespace Donefy.Src.Core.Domain.Entities;
-public class TaskEntity : EntityBase, IAggregateRoot
+public sealed class TaskEntity : EntityBase, IAggregateRoot
 {
     #region Properties
     public string Title { get; private set; } = string.Empty;
@@ -12,6 +12,12 @@ public class TaskEntity : EntityBase, IAggregateRoot
 
     #region Constructors
     public TaskEntity() {}
+    public TaskEntity(string title)
+    {
+        Validate(title);
+        Title = title;
+        Status = EStatus.ToDo;
+    }
     #endregion
 
     #region Domain Methods

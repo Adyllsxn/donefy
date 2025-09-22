@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Update
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Update;
+public class UpdateTaskCommand:  ICommand<CommandResult<bool>>
 {
-    public class UpdateTaskCommand
-    {
-        
-    }
+    public Guid Id { get; set; }
+    public string Title { get; set; } = string.Empty;
 }

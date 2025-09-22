@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Queries.GetById;
+public class GetTaskByIdQuery: IQuery<QueryResult<GetTaskByIdResponse>>
 {
-    public class GetTaskByIdQuery
-    {
-        
-    }
+    public Guid Id { get; set; }
 }

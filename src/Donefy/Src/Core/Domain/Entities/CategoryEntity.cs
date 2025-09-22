@@ -1,5 +1,5 @@
 namespace Donefy.Src.Core.Domain.Entities;
-public class CategoryEntity: EntityBase, IAggregateRoot
+public sealed class CategoryEntity: EntityBase, IAggregateRoot
 {
     #region Properties
     public string Name { get; private set; } = string.Empty;

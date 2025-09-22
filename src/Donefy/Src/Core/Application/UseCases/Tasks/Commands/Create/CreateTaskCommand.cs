@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Create
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Create;
+public class CreateTaskCommand: ICommand<CommandResult<bool>>
 {
-    public class CreateTaskCommand
-    {
-        
-    }
+    public string Title { get; set; } = string.Empty;
 }

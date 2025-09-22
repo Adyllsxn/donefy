@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Create
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Create;
+public static class CreateTaskMappings
 {
-    public class CreateTaskMappings
+    public static TaskEntity MapToTaskEntity(this CreateTaskCommand command)
     {
-        
+        return new TaskEntity(
+            command.Title
+        );
     }
 }

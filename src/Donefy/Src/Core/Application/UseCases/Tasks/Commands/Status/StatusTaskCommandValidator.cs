@@ -1,12 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Status;
+public class StatusTaskCommandValidator: AbstractValidator<StatusTaskCommand>
 {
-    public class StatusTaskCommandValidator
+    public StatusTaskCommandValidator()
     {
-        
+        RuleFor(x => x.Id)
+            .NotEmpty().WithMessage("ID is required")
+            .NotEqual(Guid.Empty).WithMessage("Invalid ID");
+
+        RuleFor(x => x.Status)
+            .IsInEnum().WithMessage("Invalid Status.");
     }
 }

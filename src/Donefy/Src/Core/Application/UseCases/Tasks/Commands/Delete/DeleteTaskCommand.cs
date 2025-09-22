@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Delete
+namespace Donefy.Src.Core.Application.UseCases.Tasks.Commands.Delete;
+public class DeleteTaskCommand: ICommand<CommandResult<bool>>
 {
-    public class DeleteTaskCommand
-    {
-        
-    }
+    public Guid Id { get; set; }
 }

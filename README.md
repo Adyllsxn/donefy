@@ -92,3 +92,9 @@ dotnet ef database update
 ```bash
 dotnet run
 ```
+
+## 📘 Documentation
+
+- [🗺️ API](doc/API.md)
+- [🗺️ ARCHITECTURE](doc/ARCHITECTURE.md)
+- [🗺️ SETUP](doc/SETUP.md)

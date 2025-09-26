@@ -16,7 +16,7 @@ public class CategoriesController : ControllerBase
     #region GetAll
     [HttpGet]
     [Route(EndpointNamesConstants.Common.GetAll)]
-    [EndpointSummary(EndpointDescriptionsConstants.Category.GetAll)]
+    [EndpointSummary(EndpointDescriptionsConstants.Business.Category.GetAll)]
     public async Task<IActionResult> GetAll([FromQuery] GetAllCategoriesDTO dto, CancellationToken token)
     {
         var result = await _facade.GetAll(dto, token);

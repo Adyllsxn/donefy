@@ -16,7 +16,7 @@ public class TasksController : ControllerBase
     #region GetAll
     [HttpGet]
     [Route(EndpointNamesConstants.Common.GetAll)]
-    [EndpointSummary(EndpointDescriptionsConstants.Task.GetAll)]
+    [EndpointSummary(EndpointDescriptionsConstants.Business.Task.GetAll)]
     public async Task<IActionResult> GetAll([FromQuery] GetAllTasksDTO dto, CancellationToken token)
     {
         var result = await _facade.GetAll(dto, token);

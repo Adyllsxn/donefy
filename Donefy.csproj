@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="QuestPDF" Version="2025.12.0-alpha1" />
+  </ItemGroup>
+
 </Project>
